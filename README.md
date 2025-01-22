@@ -1,1 +1,1 @@
-# cafe_management_system
+# sql_query_practice
