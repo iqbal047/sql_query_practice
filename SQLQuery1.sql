@@ -43,6 +43,27 @@ SELECT * FROM Products WHERE Price BETWEEN 50 AND 60;
 SELECT * FROM Customers WHERE City LIKE 's%';
 SELECT * FROM Customers WHERE City IN ('Paris','London');
 
+--ORDER BY
+--The ORDER BY keyword is used to sort the result-set in ascending or descending order.
+SELECT * FROM Products ORDER BY Price;
+--The ORDER BY keyword sorts the records in ascending order by default. To sort the records in descending order, use the DESC keyword.
+--Sort the products from highest to lowest price:
+SELECT * FROM Products ORDER BY Price DESC;
+--Sort the products alphabetically by ProductName:
+SELECT * FROM Products ORDER BY ProductName;
+--Sort the products by ProductName in reverse order:
+SELECT * FROM Products ORDER BY ProductName DESC;
+--ORDER BY Several Columns
+SELECT * FROM Customers ORDER BY Country, CustomerName;
+SELECT * FROM Customers ORDER BY Country ASC, CustomerName DESC;
+
+--AND Operator
+--The AND operator displays a record if all the conditions are TRUE.
+SELECT * FROM Customers WHERE Country ='Spain' AND CustomerName LIKE 'G%';
+SELECT * FROM Cuatomers WHERE Country ='Germany' AND City = 'Berlin' AND PostalCode > 12000
+--Combining AND and OR
+SELECT * FROM Customers WHERE Country = 'Spain' AND (CustomerName LIKE 'A%' OR CustomerName LIKE 'G%')
+
 
 
 
